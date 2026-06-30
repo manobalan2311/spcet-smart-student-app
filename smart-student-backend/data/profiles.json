@@ -1,0 +1,15 @@
+[ {
+  "rollNo" : "STU000007",
+  "name" : "Test Student",
+  "email" : "probe_student_001@college.edu",
+  "dob" : "2002-05-10",
+  "bloodGroup" : null,
+  "phone" : null,
+  "address" : null,
+  "department" : "Computer Science & Engineering",
+  "semester" : 1,
+  "section" : "A",
+  "parentName" : null,
+  "parentPhone" : null,
+  "savedAt" : "2026-06-28T22:19:07.046337"
+} ]

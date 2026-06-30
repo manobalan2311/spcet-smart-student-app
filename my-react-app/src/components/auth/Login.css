@@ -1,0 +1,235 @@
+.login-page {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Left brand panel */
+.login-brand {
+  flex: 1;
+  background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #0288d1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  color: #fff;
+}
+.brand-content { max-width: 400px; }
+.brand-logo {
+  width: 80px; height: 80px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+  backdrop-filter: blur(4px);
+}
+.login-brand h1 { font-size: 2.4rem; font-weight: 800; margin-bottom: 8px; }
+.login-brand p  { font-size: 1rem; opacity: 0.85; margin-bottom: 32px; }
+.brand-features { display: flex; flex-direction: column; gap: 12px; }
+.brand-features li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 0.95rem; opacity: 0.9;
+}
+.brand-features li::before {
+  content: '✓';
+  width: 22px; height: 22px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+/* Right form panel */
+.login-form-panel {
+  width: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 32px;
+  background: #f5f6fa;
+}
+.login-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 36px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.10);
+}
+.login-card h2 { font-size: 1.8rem; font-weight: 800; color: #1a237e; margin-bottom: 4px; }
+.login-subtitle { color: #616161; margin-bottom: 28px; font-size: 0.95rem; }
+
+/* Role selector */
+.role-selector { display: flex; flex-direction: column; gap: 8px; margin-bottom: 24px; }
+.role-btn {
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: 2px solid #e0e0e0;
+  background: #fff;
+  color: #616161;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: left;
+  transition: all 0.2s;
+}
+.role-btn:hover { border-color: #3949ab; color: #3949ab; }
+.role-btn.active { background: #f0f4ff; font-weight: 700; }
+
+/* Input with icon */
+.input-icon-wrap { position: relative; }
+.input-icon {
+  position: absolute;
+  left: 12px; top: 50%;
+  transform: translateY(-50%);
+  color: #9e9e9e;
+  pointer-events: none;
+  font-size: 1rem;
+}
+.input-with-icon { padding-left: 38px !important; }
+
+/* Demo hint */
+.demo-hint {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #9e9e9e;
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+/* ── Auth mode switch (login ↔ register) ─────────────────────────── */
+.auth-switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 0.875rem;
+  color: #757575;
+}
+
+.auth-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary, #1a237e);
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+.auth-switch-btn:hover { opacity: 0.7; text-decoration: underline; }
+
+/* ── Forgot password link ───────────────────────────────────────── */
+.forgot-row {
+  display: flex;
+  justify-content: flex-end;
+  margin: -6px 0 14px;
+}
+.forgot-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary, #1a237e);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  padding: 0;
+  transition: opacity 0.2s;
+}
+.forgot-link:hover { opacity: 0.7; text-decoration: underline; }
+
+/* ── Show / hide password toggle ────────────────────────────────── */
+.pwd-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9e9e9e;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.pwd-toggle:hover { color: #424242; }
+
+/* Input that also has a right-side button */
+.input-with-right-icon { padding-right: 38px !important; }
+
+/* ── Field-level validation errors ──────────────────────────────── */
+.field-error {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  color: var(--danger, #c62828);
+  margin-top: 4px;
+}
+
+/* Input with error state */
+.input-error {
+  border-color: var(--danger, #c62828) !important;
+}
+.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.12) !important;
+}
+
+/* ── Register card (taller, scrollable on small screens) ─────────── */
+.register-card {
+  max-height: calc(100vh - 48px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+@media (max-width: 900px) {
+  .login-brand { display: none; }
+  .login-form-panel { width: 100%; padding: 24px 16px; }
+  .register-card { max-height: none; }
+}
+
+/* ── Subject multi-select (chips) ───────────────────────────────── */
+.subject-multiselect {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.subject-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 12px;
+  border: 1px solid var(--border, #d0d0d0);
+  border-radius: 20px;
+  background: #fff;
+  color: var(--text-secondary, #555);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.subject-chip:hover {
+  border-color: #1a237e;
+  color: #1a237e;
+}
+.subject-chip.active {
+  border-color: #1a237e;
+  background: #1a237e;
+  color: #fff;
+}
+.subject-hint {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #777);
+  font-style: italic;
+  margin: 2px 0 0;
+}
+.optional-tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--text-secondary, #999);
+}

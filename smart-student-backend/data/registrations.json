@@ -1,0 +1,40 @@
+[ {
+  "email" : "testprof@college.edu",
+  "role" : "PROFESSOR",
+  "name" : "Test Professor",
+  "rollNo" : "EMP000003",
+  "department" : "Computer Science & Engineering",
+  "semester" : null,
+  "dob" : "1985-05-10",
+  "savedAt" : "2026-06-27T18:28:04.232187200"
+}, {
+  "email" : "testprof2@college.edu",
+  "role" : "PROFESSOR",
+  "name" : "Test Professor",
+  "rollNo" : "EMP000004",
+  "department" : "Computer Science & Engineering",
+  "semester" : null,
+  "dob" : "1985-05-10",
+  "savedAt" : "2026-06-27T18:29:17.361909400"
+}, {
+  "email" : "kayalvizhi@gmail.com",
+  "role" : "PROFESSOR",
+  "name" : "Kayal vizhi",
+  "rollNo" : "EMP000005",
+  "department" : "Computer Science & Engineering",
+  "semester" : null,
+  "dob" : "1985-06-23",
+  "savedAt" : "2026-06-27T18:32:23.424736800"
+}, {
+  "email" : "probe_student_001@college.edu",
+  "role" : "STUDENT",
+  "name" : "Test Student",
+  "rollNo" : "STU000007",
+  "department" : "Computer Science & Engineering",
+  "semester" : 1,
+  "dob" : "2002-05-10",
+  "savedAt" : "2026-06-28T22:19:06.993027400"
+} ,
+{
+  
+}]

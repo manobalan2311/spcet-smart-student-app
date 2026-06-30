@@ -1,0 +1,123 @@
+/* ── Profile field value display ─────────────────────────────────────────── */
+.profile-field-value {
+  padding: 10px 14px;
+  background: #f5f7ff;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border);
+  color: var(--text-primary);
+  min-height: 42px;
+}
+
+/* ── Section card header (title + edit button row) ───────────────────────── */
+.profile-section-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Small pencil Edit button shown on each card */
+.profile-edit-btn {
+  gap: 4px;
+  font-size: 0.8rem !important;
+  padding: 5px 12px !important;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.profile-section-card:hover .profile-edit-btn { opacity: 1; }
+
+/* Fleeting "Saved" confirmation badge */
+.profile-saved-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--success, #2e7d32);
+  background: #e8f5e9;
+  border-radius: 20px;
+  padding: 3px 10px;
+  animation: fadeIn 0.25s ease;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+
+/* ── Hero / avatar card ──────────────────────────────────────────────────── */
+.profile-hero {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  grid-column: 1 / -1;
+}
+
+.profile-avatar-wrap {
+  position: relative;
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+}
+
+.profile-avatar-initials {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1a237e, #3949ab);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.profile-avatar-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* Camera overlay button */
+.profile-avatar-camera {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--primary, #1a237e);
+  color: #fff;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+.profile-avatar-camera:hover { background: #3949ab; transform: scale(1.1); }
+
+.profile-hero-info { flex: 1; min-width: 180px; }
+
+.profile-hero-name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin: 0 0 4px;
+}
+
+.profile-hero-sub {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 0.95rem;
+}
